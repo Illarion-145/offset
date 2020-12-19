@@ -12,16 +12,23 @@ int f(int* a, int length, int n) {
 	return counter;
 }
 
+int searchNeg(int* a, int n) {
+	int pos = 0, neg = 0;
 
-int searchPosNeg(int* a, int n) {
+	for (int i = 0; i < n; i++) {
+		if (a[i] < 0) {
+			neg++;
+		}
+	}
+	return neg;
+}
+
+int searchPos(int* a, int n) {
 	int pos = 0, neg = 0;
 
 	for (int i = 0; i < n; i++) {
 		if (a[i] > 0) {                 // С учтом того, что 0 ни положительное, ни отрицательное число
 			pos++;
-		}
-		if (a[i] < 0) {
-			neg++;
 		}
 	}
 		return pos;
@@ -89,7 +96,8 @@ int main() {
 	int* array = new int[size_array] {1, 5, 8, 10, 11, 14};
 
 	pushNumber(FilePath1, f(array, size_array, n), array, size_array, n);
-	pushNumber(FilePath2, searchPosNeg(array, size_array),array, size_array);
+	pushNumber(FilePath2, searchPos(array, size_array),array, size_array);
+	pushNumber(FilePath2, searchNeg(array, size_array), array, size_array);
 	pushNumber(FilePath3, searchMin(array, size_array),array, size_array);
 	pushNumber(FilePath4, searchLessN(array, size_array, n), array, size_array, n);
 }
