@@ -78,15 +78,15 @@ void pushNumber(string FilePath, int res, int * a, int len, int n = 0) {
 
 int main() {
 
-	string FilePath1 = "C://Programming/file/data.txt";
+	string FilePath1 = "C://Programming/file/data1.txt";
 	
-	string FilePath2 = "C://Programming/file/data.txt";
+	string FilePath2 = "C://Programming/file/data2.txt";
 
-	string FilePath3 = "C://Programming/file/data.txt";
+	string FilePath3 = "C://Programming/file/data3.txt";
 	
-	string FilePath4 = "C://Programming/file/data.txt";
+	string FilePath4 = "C://Programming/file/data4.txt";
 
-	string FilePath5 = "C://Programming/file/data.txt";
+	string FilePath5 = "C://Programming/file/data5.txt";
 	
 	int n,
 		size_array = 6;
