@@ -70,8 +70,8 @@ void pushNumber(string FilePath, int res, int * a, int len, int n = 0) {
 	else {
 		for (int i = 0; i < len; i++)
 			out << a[i];
-		out << n;
-		out << res;
+		out << n << endl;
+		out << res << endl;
 	}
 
 }
@@ -97,7 +97,7 @@ int main() {
 
 	pushNumber(FilePath1, f(array, size_array, n), array, size_array, n);
 	pushNumber(FilePath2, searchPos(array, size_array),array, size_array);
-	pushNumber(FilePath2, searchNeg(array, size_array), array, size_array);
-	pushNumber(FilePath3, searchMin(array, size_array),array, size_array);
-	pushNumber(FilePath4, searchLessN(array, size_array, n), array, size_array, n);
+	pushNumber(FilePath3, searchNeg(array, size_array), array, size_array);
+	pushNumber(FilePath4, searchMin(array, size_array),array, size_array);
+	pushNumber(FilePath5, searchLessN(array, size_array, n), array, size_array, n);
 }
