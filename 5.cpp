@@ -61,7 +61,7 @@ void pushNumber(string FilePath, int res, int * a, int len, int n = 0) {
 		cout << "Error";
 	}
 	else {
-		for (int i = 0; i < n; i++)
+		for (int i = 0; i < len; i++)
 			out << a[i];
 		out << n;
 		out << res;
