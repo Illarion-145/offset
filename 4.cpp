@@ -15,7 +15,7 @@ int searchLessN(int* a, int length, int n) {
 int main() {
 	
 	int n,
-		size_array = 8;
+		size_array = 6;
 
 	cin >> n;
 
