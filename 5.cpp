@@ -51,7 +51,7 @@ int searchLessN(int* a, int length, int n) {
 }
 
 
-void pushNumber(string FilePath, int res) {
+void pushNumber(string FilePath, int res, int * a, int len, int n = 0) {
 
 	ofstream out;
 	out.open(FilePath, ios::app, ios::ate);
@@ -61,6 +61,9 @@ void pushNumber(string FilePath, int res) {
 		cout << "Error";
 	}
 	else {
+		for (int i = 0; i < n; i++)
+			out << a[i];
+		out << n;
 		out << res;
 	}
 
@@ -85,8 +88,8 @@ int main() {
 
 	int* array = new int[size_array] {1, 5, 8, 10, 11, 14};
 
-	pushNumber(FilePath1, f(array, size_array, n));
-	pushNumber(FilePath2, searchPosNeg(array, size_array));
-	pushNumber(FilePath3, searchMin(array, size_array));
-	pushNumber(FilePath4, searchLessN(array, size_array, n));
+	pushNumber(FilePath1, f(array, size_array, n), array, size_array, n);
+	pushNumber(FilePath2, searchPosNeg(array, size_array),array, size_array);
+	pushNumber(FilePath3, searchMin(array, size_array),array, size_array);
+	pushNumber(FilePath4, searchLessN(array, size_array, n), array, size_array, n);
 }
